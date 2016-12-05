@@ -1,0 +1,124 @@
+\ProvidesPackage{PrettyLatexReport}
+\newif\if@dynamics
+\@dynamicsfalse
+\DeclareOption{dynamics}{\@dynamicstrue}
+
+% 力学ゼミ担当範囲
+\newcommand*{\contents}[2]{\gdef\@contents{pp. #1--#2}}
+
+%この二行は、図の番号を2.30みたいにするために必要。
+\def\thefigure{\thesection.\arabic{figure}}
+\@addtoreset{figure}{section}
+
+% 数式番号も同様に変更
+\renewcommand{\theequation}{
+	\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+
+% maketitleの設定
+\renewcommand\maketitle{%
+	\begin{center}
+		\doublebox{
+			\begin{minipage}{\textwidth-3\fboxsep-10.5\fboxrule-2pt} % fancyboxのドキュメントを参照した
+				\smallskip
+				\centering
+				\textbf{\Large{\@title}}	% TITLE
+				\smallskip
+			\end{minipage}
+		}
+	\end{center}
+	\hrulefill \\
+	\begin{tabular}{llll}
+		AUTHOR : & \multicolumn{3}{l}{\@author}\\
+		DATE : & \@date \qquad PAGES : \pageref{LastPage}\\
+		\if@dynamics CONTENTS : & \multicolumn{3}{l}{\@contents}\\\fi
+	\end{tabular}
+	\\\hrulefill 
+	\global\let\maketitle\relax
+}%
+
+\ProcessOptions\relax
+
+% 図を挿入するために必要
+\usepackage{graphicx}
+
+%figure 関係
+\usepackage[subrefformat=parens]{subcaption} 
+\usepackage{caption}
+\usepackage{float}
+
+% bibtex用
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{jecon}
+
+\usepackage{multirow} % セルの列方向の結合
+\usepackage{amsmath, txfonts, amssymb}% 数式環境がより便利となる。
+\usepackage{fancybox} % 表題の囲み線を出力
+\usepackage{bm}% 太字ベクトルを使えるようにしている
+\usepackage{lastpage} % 最終ページを出したい
+\usepackage{url} % url出力
+
+\setcounter{secnumdepth}{4} % 論理構造の数列表示の深さ"narrow field"
+
+\newcommand*{\bmdot}[1]{\dot{\bm{#1}}} % bold dot
+\newcommand*{\bmddot}[1]{\ddot{\bm{#1}}} % bold dot dot
+\newcommand*{\vecdot}[1]{\dot{\vec{#1}}} % vec dot
+\newcommand*{\vecddot}[1]{\ddot{\vec{#1}}} % vec dot dot
+
+\newcommand*{\twovec}[2] % 2D Vector (2x1 Matrix)
+{
+	\begin{bmatrix}
+		#1 \\
+		#2
+	\end{bmatrix}
+}
+
+\newcommand*{\thrvec}[3] % 3D Vector (3x1 Matrix)
+{
+	\begin{bmatrix}
+		#1 \\
+		#2 \\
+		#3
+	\end{bmatrix}
+}
+
+\newcommand*{\twomat}[4] % 2x2 Matrix
+{ 
+	\begin{bmatrix}
+		#1 & #2 \\
+		#3 & #4
+	\end{bmatrix}
+}
+
+\newcommand*{\thrmat}[9] % 3x3 Matrix
+{
+	\begin{bmatrix}
+		#1 & #2 & #3 \\
+		#4 & #5 & #6 \\
+		#7 & #8 & #9
+	\end{bmatrix}
+}
+
+\newcommand*{\twovect}[2] % 2x1 Matrix
+{
+	\begin{bmatrix}
+		#1 & #2
+	\end{bmatrix}
+}
+
+\newcommand*{\thrvect}[3] % 3x1 Matrix
+{
+	\begin{bmatrix}
+		#1 & #2 & #3
+	\end{bmatrix}
+}
+
+\newcommand*{\diff}[2] % 全微分
+{
+	\frac{\mathrm{d}#1}{\mathrm{d}#2}
+}
+
+\newcommand*{\pardif}[2] % 偏微分
+{
+	\frac{\partial #1}{\partial #2}
+}
