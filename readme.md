@@ -7,12 +7,12 @@
 手抜きで作った分、改変はしやすかろうと思います。
 
 # 使い方
-PrettyLatexReportスタイルファイルを`\usepackage`してください。
+基本的にはリポジトリの`template.tex`をリネームして使ってください。
 
-日本語が文章中に含まれる場合にはuplatex, upbibtex ないしは platex, pbibtexを使用してください。
+日本語が文章中に含まれる場合にはuplatex, upbibtex ないしは platex, pbibtexを使用してコンパイルしてください。
 汎用性の観点から前者を推奨します。
-使っているドキュメントクラスはxetexなどにも対応しています。
-後者を使用する際には`\documentclass`のオプションをuplatexからplatexに変更してください。
+`template.tex`で読み込んでいるドキュメントクラスはxetexなどにも対応しています。
+platexを使用する際には`\documentclass`のオプションをuplatexからplatexに変更してください。
 bibtexのままコンパイルしようとすると、巨大な中間ファイルが生成される場合がありますので注意してください。
 
 
@@ -22,12 +22,12 @@ bibtexのままコンパイルしようとすると、巨大な中間ファイ�
 \usepackage[dynamics]{PrettyLatexReport} % for dynamics seminar
 ~~~
 
-`\title`, `\author`, `\date`, `\contents`のパラメータ指定が必要です(`\contents`は力学ゼミの場合のみ)。
+`\title`, `\author`, `\date`, `\contents`のパラメータ指定が必須です(`\contents`は力学ゼミの場合のみ)。
 
 引用文献は`\thebibliography`環境を使って書いてもよいですが、いい感じの書式になるようjecon.bstを編集してあるので、bibファイルから読み込むと楽です。
 
 jeconやスタイルファイルは、文書本体と同じフォルダに置いても機能します。
-ですが、Latexの適当なフォルダにインストールした方が、文書ごとにテンプレートをコピーしなくてよいので楽です。
+ですが、Latexの適当なフォルダにインストールすると、文書ごとにスタイルファイルなどをコピーしなくてよいので楽です。
 インストール方法は以下のとおり。
 ## jecon.bst
 jplain.bstのあるフォルダ（`C:/w32tex/share/texmf-dist/pbibtex/bst`など）にファイルを配置
