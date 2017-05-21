@@ -1,8 +1,8 @@
 % jecon.bst: 経済学用 BibTeX style file.
 %
 % First-written:       <2002/11/03>
-% Time-stamp:	       <2016-08-28 13:40:17 st>
-% Version 5.1.1
+% Time-stamp:	       <2017-02-28 14:31:08 st>
+% Version 5.2
 %
 % これは，飯田修さんによって作成された jpolisci.bst を経済学用に
 % 武田史郎が改変したものです．
@@ -979,7 +979,7 @@ FUNCTION {bst.howpublished.post.jp}
 
 % URLフィールド．非ゼロを指定するとURLが表示される．ゼロのときは非表示．
 FUNCTION {bst.show.url}
-{ #0 }    % non-#0 -> URLを表示 (default)
+{ #1 }    % non-#0 -> URLを表示 (default)
 % { #0 }    % #0 -> URLを非表示
 
 % URLの前に付ける文字列 (英語文献用)
@@ -3868,6 +3868,7 @@ FUNCTION {set.is.kanji.entry.manual}
 { language empty$
     { #0 'is.kanji.entry := }
     { language "ja" =
+      language "日本語" = or
        { #1 'is.kanji.entry := }
        { #0 'is.kanji.entry := }
       if$
