@@ -1,7 +1,11 @@
 \ProvidesPackage{PrettyLatexReport}
 \newif\if@dynamics
+\newif\if@draft
 \@dynamicsfalse
+\@draftfalse
 \DeclareOption{dynamics}{\@dynamicstrue}
+\DeclareOption{draft}{\@drafttrue}
+
 
 % 力学ゼミ担当範囲
 \newcommand*{\contents}[2]{\gdef\@contents{pp. #1--#2}}
@@ -39,13 +43,20 @@
 
 \ProcessOptions\relax
 
+% リンクを貼る
+\usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
+\usepackage{pxjahyper}
+
 % 図を挿入するために必要
+\if@draft
+\usepackage[draft]{graphicx} 
+\else
 \usepackage{graphicx}
+\fi
+
 
 %figure 関係
 \usepackage[subrefformat=parens]{subcaption} 
-\usepackage{caption}
-\usepackage{float}
 
 % bibtex用
 \usepackage[numbers,sort&compress]{natbib}

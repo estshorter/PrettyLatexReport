@@ -22,6 +22,9 @@ bibtexのままコンパイルしようとすると、巨大な中間ファイ�
 \usepackage[dynamics]{PrettyLatexReport} % for dynamics seminar
 ~~~
 
+`draft`オプションをつけると図が描画されなくなりコンパイル時間を短縮できます。
+文章確認の際に便利です。
+
 `\title`, `\author`, `\date`, `\contents`のパラメータ指定が必須です(`\contents`は力学ゼミの場合のみ)。
 
 引用文献は`\thebibliography`環境を使って書いてもよいですが、いい感じの書式になるようjecon.bstを編集してあるので、bibファイルから読み込むと楽です。
