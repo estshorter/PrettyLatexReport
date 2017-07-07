@@ -985,7 +985,7 @@ FUNCTION {bst.show.url}
 % URLの前に付ける文字列 (英語文献用)
 %
 FUNCTION {bst.url.pre}
-{ ", \url{" }	% (default)
+{ ", URL: \url{" }	% (default)
 
 % URLの後に付ける文字列 (英語文献用)
 %
