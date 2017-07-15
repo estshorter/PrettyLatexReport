@@ -1,8 +1,9 @@
+
 % jecon.bst: 経済学用 BibTeX style file.
 %
 % First-written:       <2002/11/03>
-% Time-stamp:	       <2017-07-01 00:40:42 st>
-% Version 5.3
+% Time-stamp:	       <2017-07-08 01:26:24 st>
+% Version 5.3.1
 %
 % これは，飯田修さんによって作成された jpolisci.bst を経済学用に
 % 武田史郎が改変したものです．
@@ -27,7 +28,7 @@
 % 変更履歴 (Changelog) は CHANGES.txt ファイルを見てください．
 
 % version 指定
-FUNCTION {jecon.version} { "5.3" }
+FUNCTION {jecon.version} { "5.3.1" }
 
 % Debug mode．0 以外を指定すると様々な情報を表示させることが可能．
 FUNCTION {jecon.debug}
@@ -1052,7 +1053,7 @@ FUNCTION {bst.doi.post}
 % DOIの前に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.doi.pre.jp}
-{ "，DOI: \url{http://dx.doi.org/" } % (default)
+{ "，DOI：\url{http://dx.doi.org/" } % (default)
 
 % DOIの後に付ける文字列 (日本語文献用)
 %
@@ -1068,7 +1069,7 @@ FUNCTION {bst.doi.post.jp}
 % #2 -> DOI のみ表示
 %
 FUNCTION {bst.url.doi}
-{ #2 }    % (default) -> 両方表示
+{ #0 }    % (default) -> 両方表示
 % { #1 }    % -> URL のみ表示
 % { #2 }    % -> DOI のみ表示
 
@@ -3339,7 +3340,11 @@ FUNCTION {format.url}
 FUNCTION {format.doi}
 { doi empty$ bst.show.doi not or
     { "" }
-    { bst.doi.pre doi * bst.doi.post * }
+    { is.kanji.entry
+        { bst.doi.pre.jp doi * bst.doi.post.jp * }
+        { bst.doi.pre doi * bst.doi.post * }
+      if$
+    }
   if$
 }
 
