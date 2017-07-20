@@ -1037,7 +1037,7 @@ FUNCTION {bst.access.post.jp}
 
 % 非ゼロならDOIを表示．ゼロなら非表示．
 FUNCTION {bst.show.doi}
-{ #1 }    % non-#0 -> Show DOI field (default)
+{ #0 }    % non-#0 -> Show DOI field (default)
 % { #0 }    % #0 -> Not show DOI field.
 
 % DOIの前に付ける文字列 (英語文献用)
