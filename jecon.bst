@@ -563,12 +563,12 @@ FUNCTION {bst.book.post}
 % book の title 前に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.book.pre.jp}
-{ "『" }    % (default)
+{ "``" }    % (default)
 
 % book の title 後に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.book.post.jp}
-{ "』" }    % (default)
+{ "''" }    % (default)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	booktitle
@@ -586,12 +586,12 @@ FUNCTION {bst.btitle.post}
 % booktitle の前に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.btitle.pre.jp}
-{ "『" }    % (default)
+{ "" }    % (default)
 
 % booktitle の後に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.btitle.post.jp}
-{ "』" }    % (default)
+{ "" }    % (default)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	journal name
@@ -1023,12 +1023,12 @@ FUNCTION {bst.access.post}
 % accessの前に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.access.pre.jp}
-{ "（アクセス日: " } % (default)
+{ "（" } % (default)
 
 % accessの後に付ける文字列 (日本語文献用)
 %
 FUNCTION {bst.access.post.jp}
-{ "）" }    % (default)
+{ "閲覧）" }    % (default)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       DOI (digital object identifier)
