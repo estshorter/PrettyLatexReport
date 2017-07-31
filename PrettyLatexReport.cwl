@@ -9,8 +9,8 @@
 
 \contents{arg1}{arg2}#S
 
-\bmddot{arg1}#m
-\bmdot{arg1}#m
+\ddotbm{arg1}#m
+\dotbm{arg1}#m
 \diff{arg1}{arg2}#m
 \maketitle#S
 \pardif{arg1}{arg2}#m
@@ -22,5 +22,5 @@
 \twomat{arg1}{arg2}{arg3}{arg4}#m
 \twovect{arg1}{arg2}#m
 \twovec{arg1}{arg2}#m
-\vecddot{arg1}#m
-\vecdot{arg1}#m
+\ddotvec{arg1}#m
+\dotvec{arg1}#m
