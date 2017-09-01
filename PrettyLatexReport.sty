@@ -11,8 +11,12 @@
 \newcommand*{\contents}[2]{\gdef\@contents{pp. #1--#2}}
 
 %この二行は、図の番号を2.30みたいにするために必要。
-\def\thefigure{\thesection.\arabic{figure}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
 \@addtoreset{figure}{section}
+
+% 表番号も同様に変更
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\@addtoreset{table}{section}
 
 % 数式番号も同様に変更
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
