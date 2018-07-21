@@ -1,0 +1,46 @@
+\documentclass[a4paper,uplatex,dvipdfmx,ja=standard,11pt]{bxjsarticle}
+\setpagelayout{ignorehead}
+
+\usepackage[dynamics]{PrettyLatexReport}
+
+\begin{document}
+	
+	\section{序論}
+	We choose to go to the moon. We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.
+	
+	
+	いろはにほへとちりぬるを
+	わかよたれそつねならむ
+	うゐのおくやまけふこえて
+	あさきゆめみしゑひもせす
+	
+	色は匂へど 散りぬるを
+	我が世誰ぞ 常ならむ
+	有為の奥山 けふ越えて
+	浅き夢見じ 酔ひもせず
+	
+	\paragraph{小見出し}\leavevmode\\
+	\indent
+	小見出しを入れたい場合の処理
+	\begin{align}
+		\hat{J} \cdot \dot{\vec{\omega}} + \vec{\omega}\times \vec{h}  = \vec{T} \label{eq:euler}
+	\end{align}
+	式\eqref{eq:euler}
+	
+	\section{引用}
+	引用のテスト\cite{Stevenson2012,Tsukahara2016},\cite{konoue2005,Wie2008,Isabelle,book,inbook,inproceeding,URL}
+\begin{figure}[h]
+	\begin{subfigure}{0.5\linewidth}
+		\centering\includegraphics[width=5cm]{fig/fig1.eps}
+		\caption{$\vec{f},\vec{g},\vec{h},\vec{u}$の関係}\label{fig:fig1}    % キャプションが図の下部に入る
+	\end{subfigure}
+	\begin{subfigure}{0.5\linewidth}
+		\centering\includegraphics[width=5cm]{fig/fig2.eps}
+		\caption{$\vec{g},\vec{h},\vec{u}$の関係}\label{fig:fig2}    % キャプションが図の下部に入る
+	\end{subfigure}
+	\caption{各ベクトルの幾何的関係}\label{fig:case4} 
+\end{figure}
+
+\bibliography{references}
+
+\end{document} 
