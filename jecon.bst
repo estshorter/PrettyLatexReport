@@ -308,8 +308,8 @@ FUNCTION {bst.number.index.bibhang.hund}
 % 非ゼロにする。使い方については「jecon_unicode_lualatex.pdf」を見てください。
 %
 FUNCTION {bst.use.unicode}
-{ #0 }    % Not use unicode font (default)
-% { #1 }    % Use unicode font
+% { #0 }    % Not use unicode font (default)
+{ #1 }    % Use unicode font
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
