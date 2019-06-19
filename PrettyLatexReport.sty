@@ -1,10 +1,7 @@
 \ProvidesPackage{PrettyLatexReport}
 \newif\if@dynamics
-\newif\if@draft
 \@dynamicsfalse
-\@draftfalse
 \DeclareOption{dynamics}{\@dynamicstrue}
-\DeclareOption{draft}{\@drafttrue}
 
 
 % 力学ゼミ担当範囲
@@ -51,11 +48,7 @@
 \usepackage{pxjahyper}
 
 % 図を挿入するために必要
-\if@draft
-\usepackage[draft]{graphicx} 
-\else
 \usepackage{graphicx}
-\fi
 
 
 %figure 関係

@@ -15,6 +15,11 @@
 platexを使用する際には`\documentclass`のオプションをuplatexからplatexに変更してください。
 bibtexのままコンパイルしようとすると、巨大な中間ファイルが生成される場合がありますので注意してください。
 
+**bxjsarticle**の読み込み時に`draft`オプションをつけると図が描画されなくなりコンパイル時間を短縮できます。
+文章確認の際に便利です。
+~~~
+%\documentclass[a4paper,uplatex,dvipdfmx,ja=standard,11pt,draft]{bxjsarticle}
+~~~
 
 輪講（力学ゼミ）用出力は次のように`dynamics`オプションをつけることで有効となり、CONTENTS(担当ページ数)が`\maketitle`部に表示されます。
 
@@ -22,8 +27,7 @@ bibtexのままコンパイルしようとすると、巨大な中間ファイ�
 \usepackage[dynamics]{PrettyLatexReport} % for dynamics seminar
 ~~~
 
-`draft`オプションをつけると図が描画されなくなりコンパイル時間を短縮できます。
-文章確認の際に便利です。
+
 
 `\title`, `\author`, `\date`, `\contents`のパラメータ指定が必須です(`\contents`は力学ゼミの場合のみ)。
 
