@@ -24,3 +24,5 @@
 \twovec{arg1}{arg2}#m
 \ddotvec{arg1}#m
 \dotvec{arg1}#m
+\argmin{arg1}#m
+\argmax{arg1}#m
