@@ -1,5 +1,5 @@
 # 概要
-研究室内で使っている、レポート用のLatexテンプレートです。
+研究室内で使っていた、レポート用のLatexテンプレートです。
 宇宙工学が専門の研究室なので、参考文献の書き方はjeconを使ってその流儀に合わせてあります。
 
 テンプレートと名乗っていますが、ドキュメントクラスにbxjsarticleを使用しているなんちゃってテンプレートです。
@@ -15,7 +15,7 @@
 platexを使用する際には`\documentclass`のオプションをuplatexからplatexに変更してください。
 bibtexのままコンパイルしようとすると、巨大な中間ファイルが生成される場合がありますので注意してください。
 
-`bxjsarticle`の読み込み時に`draft`オプションをつけると図が描画されなくなりコンパイル時間を短縮できます。
+`bxjsarticle`の読み込み時に`draft`オプションをつけると図が描画されなくなり、コンパイル時間を短縮できます。
 文章確認の際に便利です。
 ~~~
 %\documentclass[a4paper,uplatex,dvipdfmx,ja=standard,11pt,draft]{bxjsarticle}
@@ -27,9 +27,7 @@ bibtexのままコンパイルしようとすると、巨大な中間ファイ�
 \usepackage[dynamics]{PrettyLatexReport} % for dynamics seminar
 ~~~
 
-
-
-`\title`, `\author`, `\date`, `\contents`のパラメータ指定が必須です(`\contents`は力学ゼミの場合のみ)。
+`\title`, `\author`, `\date`, `\contents`はパラメータ指定が必須です(`\contents`は力学ゼミの場合のみ)。
 
 引用文献は`\thebibliography`環境を使って書いてもよいですが、いい感じの書式になるようjecon.bstを編集してあるので、bibファイルから読み込むと楽です。
 
