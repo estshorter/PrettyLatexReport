@@ -35,7 +35,7 @@ jeconやスタイルファイルは、文書本体と同じフォルダに置い
 ですが、Latexの適当なフォルダにインストールすると、文書ごとにスタイルファイルなどをコピーしなくてよいので楽です。
 インストール方法は以下のとおり。
 ## jecon.bst
-jplain.bstのあるフォルダ（`C:/w32tex/share/texmf-dist/pbibtex/bst`など）にファイルを配置
+`C:/w32tex/share/texmf-local/pbibtex/bst`などにファイルを配置後、コマンドプロンプトから`mktexlsr`を叩く。
 ## PrettyLatexReport.sty
 `C:/w32tex/share/texmf-local/tex/latex/PrettyLatexReport` に`PrettyLatexReport.sty`ファイルを配置後、コマンドプロンプトから`mktexlsr`を叩く。
 
