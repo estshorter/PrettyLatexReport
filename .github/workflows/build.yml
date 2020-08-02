@@ -21,14 +21,15 @@ jobs:
           template_wo_maketitle.tex
         compiler: latexmk
         args: -file-line-error -halt-on-error
-    - name : ls
+    - name : copy pdf files
       run: |
-        pwd
-        ls
+        mkdir pdfs
+        echo "Generated pdfs"
+        ls *.pdf
+        echo "-------------"
+        cp *.pdf
     - name: upload result files
       uses: actions/upload-artifact@v1
       with:
         name: pdfs_${{ github.sha }}
-        path: |
-          template.pdf
-          template_wo_maketitle.pdf
+        path: pdfs
