@@ -1,0 +1,24 @@
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: template.tex
+    - name: upload result files
+      uses: actions/upload-artifact@v1
+      with:
+        name: template_${{ github.sha }}.pdf
+        path: template.pdf
