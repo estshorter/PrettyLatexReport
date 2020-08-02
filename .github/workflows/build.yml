@@ -27,7 +27,7 @@ jobs:
         echo "Generated pdfs"
         ls *.pdf
         echo "-------------"
-        cp *.pdf
+        cp *.pdf ./pdfs
     - name: upload result files
       uses: actions/upload-artifact@v1
       with:
