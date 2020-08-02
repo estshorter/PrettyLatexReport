@@ -17,6 +17,8 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: template.tex
+        compiler: latexmk
+        args: -file-line-error -halt-on-error -interaction=nonstopmode
     - name: upload result files
       uses: actions/upload-artifact@v1
       with:
