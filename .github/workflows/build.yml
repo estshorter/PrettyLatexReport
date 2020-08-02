@@ -18,13 +18,11 @@ jobs:
       with:
         root_file: |
           template.tex
-          template_wo_maketitle.tex
         compiler: latexmk
-        args: -file-line-error -halt-on-error -interaction=nonstopmode
+        args: -file-line-error -halt-on-error
     - name: upload result files
       uses: actions/upload-artifact@v1
       with:
-        name: pdf_${{ github.sha }}
+        name: pdfs_${{ github.sha }}
         path: |
           template.pdf
-          template_wo_maketitle.pdf
