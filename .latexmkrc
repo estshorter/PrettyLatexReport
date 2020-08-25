@@ -2,3 +2,4 @@ $latex         = 'uplatex %O -no-guess-input-enc -interaction=nonstopmode -synct
 $bibtex        = 'upbibtex %O %B -kanji=utf8';
 $dvipdf        = 'dvipdfmx %O -o %D %S';
 $pdf_mode      = 3; # use dvipdfmx
+$bibtex_use    = 2; # use bibtex
