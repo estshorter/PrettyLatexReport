@@ -60,17 +60,19 @@
 \usepackage[numbers,sort&compress]{natbib}
 \bibliographystyle{jecon}
 
+\usepackage{booktabs} % 表中で\topruleとかが使えるようになる
 \usepackage{multirow} % セルの列方向の結合
 \usepackage[T1]{fontenc} % フォントに関するおまじない
-\usepackage{amsmath, newtxtext, newtxmath}% 数式環境がより便利となる。
+\usepackage{amsmath}% 数式環境がより便利となる
+\usepackage{newtxtext, newtxmath}% fontをいい感じのやつにする
 \renewcommand{\headfont}{\gtfamily\sffamily} % https://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=2763
 \usepackage{fancybox} % 表題の囲み線を出力
 \usepackage{bm}% 太字ベクトルを使えるようにしている
-\usepackage{lastpage} % 最終ページを出したい
+\usepackage{lastpage} % 最終ページを出せるようにする
 \usepackage{url} % url出力
 \renewcommand{\bibsection}{\section*{\bibname}\addcontentsline{toc}{section}{\bibname}} % 参考文献がブックマークに入るようになる。\sectionでないのは、\appendix が前にあると「付録B 参考文献」のようになってしまうため
-\usepackage{booktabs} % 表中で\topruleとかが使えるようになる
 
+% 以下、コマンド定義
 \newcommand*{\dotbm}[1]{\dot{\bm{#1}}} % bold dot
 \newcommand*{\ddotbm}[1]{\ddot{\bm{#1}}} % bold dot dot
 \newcommand*{\dotvec}[1]{\dot{\vec{#1}}} % vec dot
