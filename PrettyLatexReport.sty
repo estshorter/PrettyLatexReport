@@ -51,10 +51,13 @@
 \usepackage{graphicx}
 
 
-%figure 関係
+% figure 関係
 \usepackage[hang,small,bf]{caption}
 \usepackage{subcaption} 
 \captionsetup{subrefformat=parens}
+% 引用したときに1(a)のように表示されるようにする
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
 % bibtex用
 \usepackage[numbers,sort&compress]{natbib}
