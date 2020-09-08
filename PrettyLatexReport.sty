@@ -3,6 +3,13 @@
 \@dynamicsfalse
 \DeclareOption{dynamics}{\@dynamicstrue}
 
+\newif\if@submit
+\@submitfalse
+\DeclareOption{submit}{\@submittrue}
+\if@submit
+	\pagestyle{empty}
+	\renewcommand\maketitle{}
+\fi
 
 % 力学ゼミ担当範囲
 \newcommand*{\contents}[2]{\gdef\@contents{pp. #1--#2}}
