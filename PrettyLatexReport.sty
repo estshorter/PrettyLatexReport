@@ -23,7 +23,7 @@
 \@addtoreset{equation}{section}
 
 % maketitleの設定
-\renewcommand\maketitle{%
+\renewcommand\maketitle{
 	\begin{center}
 		\doublebox{
 			\begin{minipage}{\textwidth-3\fboxsep-10.5\fboxrule-2pt} % fancyboxのドキュメントを参照した
@@ -42,7 +42,7 @@
 	\end{tabular}
 	\\\hrulefill 
 	\global\let\maketitle\relax
-}%
+}
 
 \ProcessOptions\relax
 
@@ -75,6 +75,7 @@
 \usepackage{url} % url出力
 \renewcommand{\bibsection}{\section*{\bibname}\addcontentsline{toc}{section}{\bibname}} % 参考文献がブックマークに入るようになる。\sectionでないのは、\appendix が前にあると「付録B 参考文献」のようになってしまうため
 
+% submitオプション指定時はページ番号とタイトル等を消す
 \if@submit
 	\pagestyle{empty}
 	\renewcommand\maketitle{}
