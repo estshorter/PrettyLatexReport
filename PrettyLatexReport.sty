@@ -6,10 +6,6 @@
 \newif\if@submit
 \@submitfalse
 \DeclareOption{submit}{\@submittrue}
-\if@submit
-	\pagestyle{empty}
-	\renewcommand\maketitle{}
-\fi
 
 % 力学ゼミ担当範囲
 \newcommand*{\contents}[2]{\gdef\@contents{pp. #1--#2}}
@@ -78,6 +74,11 @@
 \usepackage{lastpage} % 最終ページを出せるようにする
 \usepackage{url} % url出力
 \renewcommand{\bibsection}{\section*{\bibname}\addcontentsline{toc}{section}{\bibname}} % 参考文献がブックマークに入るようになる。\sectionでないのは、\appendix が前にあると「付録B 参考文献」のようになってしまうため
+
+\if@submit
+	\pagestyle{empty}
+	\renewcommand\maketitle{}
+\fi
 
 % 以下、コマンド定義
 \newcommand*{\dotbm}[1]{\dot{\bm{#1}}} % bold dot
