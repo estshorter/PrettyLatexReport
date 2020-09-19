@@ -2,10 +2,10 @@
 #include:graphicx
 #include:subcaption
 #include:amsmath
-#include:newtxtext
 #include:newtxmath
 #include:bm
 #include:url
+#include:booktabs
 
 \contents{arg1}{arg2}#S
 
