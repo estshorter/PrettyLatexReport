@@ -4792,12 +4792,12 @@ EXECUTE {calc.flabel.mess}
 ITERATE {calc.flabel}
 
 %%%
-EXECUTE {calc.sort.label.abb.mess}
-ITERATE {calc.sort.label.abb}
+%EXECUTE {calc.sort.label.abb.mess}
+%ITERATE {calc.sort.label.abb}
 
 %%% presort の実行 
-EXECUTE {presort.one.mess}
-ITERATE {presort.one}
+%EXECUTE {presort.one.mess}
+%ITERATE {presort.one}
 
 %%% sort.key$ を利用して文献の並べ替え．一回目の並べ替え．
 
@@ -4806,7 +4806,7 @@ ITERATE {presort.one}
 % 日本語文献の両方があり、かつ日本語文献の yomi に英語文献の著者と同じものが指
 % 定してあるときに、両者を混ぜて表示する"に対応するため．
 
-SORT
+%SORT
 
 % last.sort.label: 一個前の sort.label.abb の値を保持。
 FUNCTION {forward.pass}
