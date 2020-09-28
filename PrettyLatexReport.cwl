@@ -6,6 +6,7 @@
 #include:bm
 #include:url
 #include:booktabs
+#include:siunitx
 
 \contents{arg1}{arg2}#S
 
