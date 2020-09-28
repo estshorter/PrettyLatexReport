@@ -2,7 +2,6 @@
 #include:graphicx
 #include:subcaption
 #include:amsmath
-#include:newtxmath
 #include:bm
 #include:url
 #include:booktabs
