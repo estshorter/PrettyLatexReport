@@ -6,6 +6,9 @@
 #include:url
 #include:booktabs
 #include:siunitx
+#include:newpxtext
+#include:newpxmath
+#include:physics
 
 \contents{arg1}{arg2}#S
 
