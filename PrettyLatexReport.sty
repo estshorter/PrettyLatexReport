@@ -46,6 +46,11 @@
 
 \ProcessOptions\relax
 
+% PDFのバージョンを1.7にする（パワポ出力PDFをいれこむときのエラー対策）
+% .latexmkrcの設定を変えてもよいが、汎用性を考えてbxpdfverで設定する
+% https://qiita.com/zr_tex8r/items/a590ee544e95c525bba0
+\usepackage[1.7]{bxpdfver}
+
 % リンクを貼る
 \usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
 \usepackage{pxjahyper}
